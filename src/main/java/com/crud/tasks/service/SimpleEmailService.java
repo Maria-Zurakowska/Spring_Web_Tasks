@@ -35,6 +35,7 @@ public class SimpleEmailService {
         if(mail.getToCC()!=null && !mail.getToCC().equals("")  ) {
             mailMessage.setCc(mail.getToCC());
         }
+
         return mailMessage;
     }
 }
