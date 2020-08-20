@@ -37,6 +37,7 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     implementation 'junit:junit:4.12'
+    //Tego nie ruszam czy jestem lokalnie czy Heroku
     //providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
