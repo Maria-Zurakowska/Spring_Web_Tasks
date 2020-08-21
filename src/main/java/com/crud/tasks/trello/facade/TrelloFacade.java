@@ -33,12 +33,7 @@ public class TrelloFacade {
     }
     public CreatedTrelloCardDto createCard(final TrelloCardDto trelloCardDto){
         TrelloCard trelloCard = trelloMapper.mapToCard(trelloCardDto);
-        if (trelloCard.getName().contains("test")){
-            LOGGER.info("Someone is testing my application!");
-        } else {
-            LOGGER.info("Seems that my application is being used in a proper way.");
-        }
+        trelloValidator.validateCard(trelloCard);
         return trelloService.createdTrelloCard(trelloMapper.mapToCardDto(trelloCard));
-
     }
 }
