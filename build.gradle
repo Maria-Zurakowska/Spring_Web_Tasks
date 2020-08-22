@@ -21,6 +21,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.google.code.gson:gson:2.8.2')
 
     //Dla lokalnej bazy danych to ma być odkomentowane
     compile('mysql:mysql-connector-java')
