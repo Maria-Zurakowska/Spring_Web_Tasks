@@ -79,7 +79,7 @@ public class TaskControllerTestSuite {
         given(taskMapper.mapToTaskDto(task)).willReturn(taskDto);
         given(dbService.getTask(1L)).willReturn(Optional.of(task));
         //When && Then
-        mockMvc.perform(get("/v1/task/getTask/{taskId}", 1L)
+        mockMvc.perform(get("/v1/task/getTask?taskId=1", 1L)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(1)))
@@ -92,7 +92,7 @@ public class TaskControllerTestSuite {
         //Given
         doNothing().when(dbService).deleteTask(1L);
         //When && Then
-        mockMvc.perform(delete("/v1/task/deleteTask/{taskId}", 1L)
+        mockMvc.perform(delete("/v1/task/deleteTask?taskId=1", 1L)
                 .contentType(MediaType.APPLICATION_JSON)
                 .characterEncoding("UTF-8"))
                 .andExpect(status().isOk());
