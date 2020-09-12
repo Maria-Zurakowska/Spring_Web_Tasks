@@ -60,6 +60,6 @@ public class MailCreatorService {
         context.setVariable("daily_TasksList", dailyTasksList);
         context.setVariable("goodbye_message", "Hope to see you again!");
         context.setVariable("preview_message", "Welcome!");
-        return templateEngine.process("mail/created-trello-card-mail", context);
+        return templateEngine.process("mail/created-trello-card-mail2", context);
     }
 }
